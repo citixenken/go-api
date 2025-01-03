@@ -1,7 +1,7 @@
 package transport
 
 import (
-	"my_first_api/internal/todo"
+	"github.com/citixenken/go-api.git/internal/todo"
 	"reflect"
 	"testing"
 )

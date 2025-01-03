@@ -1,10 +1,10 @@
 package main
 
 import (
+	"github.com/citixenken/go-api.git/internal/db"
+	"github.com/citixenken/go-api.git/internal/todo"
+	"github.com/citixenken/go-api.git/internal/transport"
 	"log"
-	"my_first_api/internal/db"
-	"my_first_api/internal/todo"
-	"my_first_api/internal/transport"
 )
 
 func main() {

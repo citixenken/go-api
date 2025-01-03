@@ -2,8 +2,8 @@ package transport
 
 import (
 	"encoding/json"
+	"github.com/citixenken/go-api.git/internal/todo"
 	"log"
-	"my_first_api/internal/todo"
 	"net/http"
 )
 

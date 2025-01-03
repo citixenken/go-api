@@ -1,4 +1,4 @@
-module my_first_api
+module github.com/citixenken/go-api.git
 
 go 1.23
 

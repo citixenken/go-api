@@ -2,8 +2,8 @@ package todo_test
 
 import (
 	"context"
-	"my_first_api/internal/db"
-	"my_first_api/internal/todo"
+	"github.com/citixenken/go-api.git/internal/db"
+	"github.com/citixenken/go-api.git/internal/todo"
 	"reflect"
 	"testing"
 )

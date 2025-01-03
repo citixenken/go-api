@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"my_first_api/internal/db"
+	"github.com/citixenken/go-api.git/internal/db"
 	"strings"
 )
 
@@ -31,7 +31,7 @@ func NewService(db Manager) *Service {
 func (svc *Service) Add(todo string) error {
 	items, err := svc.GetAll()
 	if err != nil {
-		return fmt.Errorf("Failed to read from db: %w", err)
+		return fmt.Errorf("failed to read from db: %w", err)
 	}
 
 	for _, t := range items {
@@ -44,7 +44,7 @@ func (svc *Service) Add(todo string) error {
 		Task:   todo,
 		Status: "TO_BE_STARTED",
 	}); err != nil {
-		return fmt.Errorf("Failed to insert item: %w", err)
+		return fmt.Errorf("failed to insert item: %w", err)
 	}
 
 	return nil
@@ -55,7 +55,7 @@ func (svc *Service) GetAll() ([]Item, error) {
 	items, err := svc.db.GetAllItems(context.Background())
 
 	if err != nil {
-		return nil, fmt.Errorf("Failed to read from DB: %w", err)
+		return nil, fmt.Errorf("failed to read from DB: %w", err)
 	}
 
 	for _, item := range items {
@@ -71,7 +71,7 @@ func (svc *Service) GetAll() ([]Item, error) {
 func (svc *Service) Search(query string) ([]string, error) {
 	items, err := svc.GetAll()
 	if err != nil {
-		return nil, fmt.Errorf("Failed to read from db: %w", err)
+		return nil, fmt.Errorf("failed to read from db: %w", err)
 	}
 
 	var results []string
